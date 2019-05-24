@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import CardList from "./CardList";
-import { gotcaste } from "./got";
-import Searchbox from "./Searchbox";
+import CardList from "./components/CardList";
+import { gotcaste } from "./components/got";
+import Searchbox from "./components/Searchbox";
+import Scroll from "./components/Scroll";
 
 export default class App extends Component {
   constructor() {
@@ -16,6 +17,7 @@ export default class App extends Component {
     this.setState({ searchfield: event.target.value });
   };
 
+  //FILTERING THE ARRAY ACCORDING TO THE SEARCHFIELD
   render() {
     const filteredChars = this.state.gotcaste.filter(char => {
       return char.name
@@ -26,7 +28,9 @@ export default class App extends Component {
       <div className="tc">
         <h1 className="f1">GOT FLASH CARDS</h1>
         <Searchbox searchChange={this.onSearchChange} />
-        <CardList arr={filteredChars} />
+        <Scroll>
+          <CardList arr={filteredChars} />
+        </Scroll>
       </div>
     );
   }
