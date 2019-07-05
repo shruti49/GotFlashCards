@@ -14,6 +14,7 @@ git clone https://github.com/shruti49/GotFlashCards
 
 3. Once all of the dependencies have been installed launch the development server with
 
+
 ### `npm start` or `yarn start`
 
 A new browser window should automatically open displaying the app. If it doesn't, navigate to [http://localhost:3000/](http://localhost:3000/) in your browser
