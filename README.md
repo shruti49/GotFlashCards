@@ -19,7 +19,7 @@ git clone https://github.com/shruti49/GotFlashCards
 
 A new browser window should automatically open displaying the app. If it doesn't, navigate to [http://localhost:3000/](http://localhost:3000/) in your browser
 
-#OR
+# OR
 
 Click here https://shruti49.github.io/GotFlashCards/
 
