@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import CardList from "./components/CardList";
+import CardList from "./components/CardList/cardlist-component";
 import { gotcaste } from "./components/got";
-import Searchbox from "./components/Searchbox";
+import Searchbox from "./components/SearchBox/searchbox-component";
 
 export default class App extends Component {
   constructor() {
@@ -21,7 +21,7 @@ export default class App extends Component {
   //FILTERING THE ARRAY ACCORDING TO THE SEARCHFIELD
   render() {
     const { gotcaste, searchfield } = this.state;
-    //filtering and showing only those books whose name matches the input value
+    //filtering and showing only those characters whose name matches the input value
     const filteredChars = gotcaste.filter(char => {
       return char.name.toLowerCase().includes(searchfield.toLowerCase());
     });
