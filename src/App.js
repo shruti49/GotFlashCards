@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import CardList from "./components/CardList/cardlist-component";
+import { CardList } from "./components/CardList/card-list.component";
 import { gotcaste } from "./components/got";
-import Searchbox from "./components/SearchBox/searchbox-component";
+import { Searchbox } from "./components/SearchBox/search-box.component";
 
 export default class App extends Component {
   constructor() {
@@ -29,7 +29,10 @@ export default class App extends Component {
       <div className="tc">
         <h1 className="f1">GOT FLASH CARDS</h1>
         {/*Passing props*/}
-        <Searchbox searchChange={this.onSearchChange} />
+        <Searchbox
+          searchChange={this.onSearchChange}
+          placeholder={"search characters..."}
+        />
         <CardList arr={filteredChars} />
       </div>
     );

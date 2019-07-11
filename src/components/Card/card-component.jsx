@@ -1,7 +1,8 @@
 import React from "react";
 
-const Card = props => {
-  const { src, name, house } = props;
+//FUNCTIONAL COMPONENT
+export const Card = props => {
+  const { src, name, house } = props.user;
   return (
     /*creating a  card*/
     <div className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5 ">
@@ -15,5 +16,3 @@ const Card = props => {
     </div>
   );
 };
-
-export default Card;
